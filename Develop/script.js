@@ -10,10 +10,8 @@ const collectEmployees = function() {
     const firstName = prompt("Enter first name:");
     const lastName = prompt("Enter last name:");
     let salaryInput = prompt("Enter salary:");
+    continueAdding = confirm("Do you wnat to add another employee?");
    
-    let salary = parseFloat(salaryInput);
-  // TODO: Figure out how to validate the input for salary so a valid number is entered.
-
   //TODO: Figure out how to get it to stop asking for more employees forever 
 
   //TODO: Figure out what to get it to add the employee information to the chart //
