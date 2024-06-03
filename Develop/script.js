@@ -28,18 +28,14 @@ const collectEmployees = function() {
 }
 
 // Display the average salary
+
 const displayAverageSalary = function(employeesArray) {
-  if (employeesArray.length === 0) {
-    console.log("No employee information available.");
-    return;
-  }
+  
   const totalSalary = employeesArray.reduce((total, employee) => total + employee.salary, 0);
   const averageSalary = totalSalary / employeesArray.length;
 
   console.log(`The average employee salary between our ${employeesArray.length} employee(s) is $${averageSalary}.`)
 }
-
-// TODO: Log something if there's no employee informations saying there's no information yet.
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
