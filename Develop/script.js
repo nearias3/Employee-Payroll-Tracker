@@ -12,6 +12,12 @@ const collectEmployees = function() {
     let salaryInput = prompt("Enter salary:");
     const salary = parseFloat(salaryInput);
 
+    while (isNaN(salary)) {
+      alert("Please enter a valid salary amount.");
+      salaryInput = prompt("Enter salary:");
+      salary = parseFloat(salaryInput);
+    }
+    
     employees.push({ firstName, lastName, salary});
     
     continueAdding = confirm("Do you want to add another employee?");
@@ -21,12 +27,14 @@ const collectEmployees = function() {
   return employees;
 }
 
-  // TODO: Validate the salary input, make sure a correct number amount can be added"
-
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
- const totalSalary = employeesArray.reduce((total, employee) => total + employee.salary, 0);
- const averageSalary = totalSalary / employeesArray.length;
+  if (employeesArray.length === 0) {
+    console.log("No employee information available.");
+    return;
+  }
+  const totalSalary = employeesArray.reduce((total, employee) => total + employee.salary, 0);
+  const averageSalary = totalSalary / employeesArray.length;
 
   console.log(`The average employee salary between our ${employeesArray.length} employee(s) is $${averageSalary}.`)
 }
