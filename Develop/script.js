@@ -19,6 +19,7 @@ const collectEmployees = function() {
 }
 
   //TODO: Figure out what to get it to add the employee information to the chart //
+  // TODO: Validate the salary input, make sure a correct number amount can be added"
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
@@ -28,15 +29,13 @@ const displayAverageSalary = function(employeesArray) {
   console.log(`Average Salary: ${averageSalary}`)
 }
 
-//TODO: Log something if there's no employee informations saying there's no information.
+// TODO: Log something if there's no employee informations saying there's no information.
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  return Math.floor(Math.random() *max);
-
+  const randomIndex = Math.floor(Math.random() *max);
   const randomEmployee = employeesArray[randomIndex];
   console.log(`Random Employee: ${randomEmployee.firstName}`);
-
 }
 
 /*
