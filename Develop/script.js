@@ -10,17 +10,27 @@ const collectEmployees = function() {
     const firstName = prompt("Enter first name:");
     const lastName = prompt("Enter last name:");
     let salaryInput = prompt("Enter salary:");
+   
     let salary = parseFloat(salaryInput);
+  // TODO: Figure out how to validate the input for salary so a valid number is entered.
 
-  // Figure out how to validate the input for salary so a valid number is entered.
+  //TODO: Figure out how to get it to stop asking for more employees forever 
 
+  //TODO: Figure out what to get it to add the employee information to the chart //
+  
   }
 }
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
  // TODO: Calculate and display the average salary
+ const totalSalary = employeesArray.reduce((total, employee) => total + employee.salary, 0);
+ const averageSalary = totalSalary / employeesArray.length;
+
+  console.log(`Average Salary: ${averageSalary}`)
 }
+
+//TODO: Log something if there's no employee informations saying there's no information.
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
