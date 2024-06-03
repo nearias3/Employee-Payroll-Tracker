@@ -11,6 +11,7 @@ const collectEmployees = function() {
     const lastName = prompt("Enter last name:");
     let salaryInput = prompt("Enter salary:");
     const salary = parseFloat(salaryInput);
+
     employees.push({ firstName, lastName, salary});
     
     continueAdding = confirm("Do you want to add another employee?");
@@ -27,16 +28,16 @@ const displayAverageSalary = function(employeesArray) {
  const totalSalary = employeesArray.reduce((total, employee) => total + employee.salary, 0);
  const averageSalary = totalSalary / employeesArray.length;
 
-  console.log(`Average Salary: ${averageSalary}`)
+  console.log(`The average employee salary between our ${employeesArray.length} employee(s) is $${averageSalary}.`)
 }
 
 // TODO: Log something if there's no employee informations saying there's no information yet.
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  const randomIndex = Math.floor(Math.random() *max);
+  const randomIndex = Math.floor(Math.random() * employeesArray.length);
   const randomEmployee = employeesArray[randomIndex];
-  console.log(`Random Employee: ${randomEmployee.firstName}`);
+  console.log(`Congratulations to ${randomEmployee.firstName} ${randomEmployee.lastName}, our random drawing winner!`);
 }
 
 // 
