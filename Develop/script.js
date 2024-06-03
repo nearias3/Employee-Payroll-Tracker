@@ -10,14 +10,15 @@ const collectEmployees = function() {
     const firstName = prompt("Enter first name:");
     const lastName = prompt("Enter last name:");
     let salaryInput = prompt("Enter salary:");
-    continueAdding = confirm("Do you wnat to add another employee?");
-   
-  //TODO: Figure out how to get it to stop asking for more employees forever 
+    const salary = parseFloat(salaryInput);
+    employees.push({ firstName, lastName, salary});
+    
+    continueAdding = confirm("Do you want to add another employee?");
+  }
+  return employees;
+}
 
   //TODO: Figure out what to get it to add the employee information to the chart //
-  
-  }
-}
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
