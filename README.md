@@ -9,5 +9,14 @@ The purpose of this project was for me to get better acquainted with some of the
 
 In order to access the deployed website, click the following link: [https://nearias3.github.io/Employee-Payroll-Tracker/]
 
+![Screenshot of Portfolio Webpage](./Assets/website-screenshot.png)
 
+## Credits
 
+Useful information about coding, including tutorials and guides, were provided by the UT Bootcamp GitLab: [https://git.bootcampcontent.com/University-of-Texas-at-Austin/UTA-VIRT-FSF-PT-05-2024-U-LOLC/].
+
+I frequently referred to Mozilla's developer tool blogs (MDN Web Docs) for help identifying the correct code and syntax: [https://developer.mozilla.org/en].
+
+## License
+
+Please refer to the license in the repo.
